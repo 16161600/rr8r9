@@ -61,11 +61,3 @@ async def restart(client, m: Message):
     await loli.edit("**✅ تم اعادة تشغيل البوت**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
-
-
-@Client.on_message(filters.command(["المطور"], prefixes=f"{HNDLR}"))
-async def help(client, m: Message):
-    await m.delete()
-    HELP = f"""
-<b>❤️‍🔥 مرحبا عزيزي {m.from_user.mention}!
-🛠 مطور السورس @rr8r9
