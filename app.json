@@ -3,9 +3,9 @@
     "description": "تشغيل موسيقى في حسابك الأساسي.",
     "logo": "https://te.legra.ph/file/3022a443543e9cb4b207f.jpg",
     "keywords": [
-        "Telegram",
-        "MusicPlayer",
-        "VideoPlayer"
+        "تليجرام",
+        "ثليثون",
+        "موسيقى"
     ],
     "repository": "https://github.com/freedomSource/Source-Freedom",
     "env": {
@@ -27,9 +27,8 @@
             "required": true
         },
         "SUDO_USERS": {
-            "description": "اكتب ايدي المطور او اتركها كما هي ",
-            "required": false
-            "value": "1854384004"
+            "description": "اكتب ايدي المطور ",
+            "required": true
         }
     },
     "addons": [],
