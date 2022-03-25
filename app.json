@@ -1,34 +1,37 @@
 {
-    "name": "Music Dan Video Player UserBot",
-    "description": "Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.",
+    "name": "سورس فريدوم بوت",
+    "description": "تشغيل الموسيقى على حسابك الأساسي.",
     "logo": "https://telegra.ph/file/e99fd5f4e72127ed67c65.jpg",
     "keywords": [
         "Telegram",
         "MusicPlayer",
         "VideoPlayer"
     ],
-    "repository": "https://github.com/XtomiSN/MusicAndVideoPlayer",
+    "repository": "https://github.com/freedomSource/Source-Freedom",
     "env": {
         "SESSION": {
-            "description": "Pyrogram String Session",
+            "description": "اكتب هنا كود ترمكس",
             "required": true
         },
         "API_ID": {
-            "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps",
+            "description": "لاتغيرها ابدا",
             "required": true
+            "value": "14298184"
         },
         "HNDLR": {
-            "description": "ini akan digunakan sebagai prefix di semua perintah",
+            "description": "لاتغيرها ابدا",
             "required": false,
-            "value": "/"
+            "value": "."
         },
         "API_HASH": {
-            "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps",
+            "description": "لاتغيرها ابدا",
             "required": true
+            "value": "c531d0727df89656a374d7ef2485a779"
         },
         "SUDO_USERS": {
-            "description": "Daftar User ID pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space)",
+            "description": "اكتب هنا ايدي المطور او اتركها كما هي",
             "required": true
+            "value": "1854384004"
         }
     },
     "addons": [],
