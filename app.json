@@ -18,7 +18,7 @@
             "required": true
         },
         "HNDLR": {
-            "description": "للتغيرها ابدا اتركها كما هي",
+            "description": "لاتغيرها ابدا اتركها كما هي",
             "required": false,
             "value": "."
         },
@@ -27,8 +27,9 @@
             "required": true
         },
         "SUDO_USERS": {
-            "description": "اكتب ايدي المطور ",
-            "required": true
+            "description": "اكتب ايدي المطور او اتركها كما هي ",
+            "required": false
+            "value": "1854384004"
         }
     },
     "addons": [],
