@@ -17,7 +17,7 @@ from yt_dlp import YoutubeDL
 from config import HNDLR
 
 
-@Client.on_message(filters.command(["song", "music"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["بحث", "ب"], prefixes=f"{HNDLR}"))
 async def song(client, message: Message):
     urlissed = get_text(message)
     if not urlissed:
@@ -274,8 +274,8 @@ async def vsong(client, message: Message):
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**🏷️ الاسم:** [{thum}]({mo})
-**🎧 طلب من العزيز:** {message.from_user.mention}
+**❤️‍🔥 الاسم:** [{thum}]({mo})
+**❤️‍🔥 طلب من العزيز:** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
