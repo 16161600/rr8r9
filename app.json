@@ -27,7 +27,7 @@
             "required": true
         },
         "SUDO_USERS": {
-            "description": "اكتب ايدي المطور ",
+            "description": " اكتب ايدي المطور او انسخ هذه وضعة في الاسفل : 1854384004 ",
             "required": true
         }
     },
