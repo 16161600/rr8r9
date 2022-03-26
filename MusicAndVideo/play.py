@@ -128,7 +128,7 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
-**▶ يَتمَ اެݪتشغِيݪ اެلانِ
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
 ❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
@@ -157,7 +157,7 @@ async def play(client, m: Message):
                 thumb = await gen_thumb(thumbnail, title, userid, ctitle)
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                    await huehue.edit(f"**خطا ⚠️** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
@@ -166,7 +166,7 @@ async def play(client, m: Message):
                         await m.reply_photo(
                             photo=f"{thumb}",
                             caption=f"""
-**#⃣ يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({url})
 ❤️‍🔥 اެݪمَدَةَ: {duration}
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
@@ -234,7 +234,7 @@ async def vplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
                     caption=f"""
-**#⃣ يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
 ❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
@@ -258,7 +258,7 @@ async def vplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
-**▶ يَتمَ اެݪتشغِيݪ اެلانِ
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
 ❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
@@ -322,7 +322,7 @@ async def vplay(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{thumb}",
                                 caption=f"""
-**▶ يَتمَ اެݪتشغِيݪ اެلانِ
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({url})
 ❤️‍🔥 اެݪمَدَةَ: {duration}
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
@@ -372,7 +372,7 @@ async def playfrom(client, m: Message):
                     await m.reply_photo(
                         photo="https://telegra.ph/file/6213d2673486beca02967.png",
                         caption=f"""
-**▶ يَتمَ اެݪتشغِيݪ اެلانِ {chat}
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {chat}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
 ❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
 ❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
