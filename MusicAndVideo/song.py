@@ -23,7 +23,7 @@ async def song(client, message: Message):
     if not urlissed:
         await client.send_message(
             message.chat.id,
-            "Sintaks Perintah Tidak Valid, Silakan Periksa Menu Bantuan Untuk Tahu Lebih Banyak!",
+            "صيغة الأمر غير صالحة يرجى مراجعة قائمة التعليمات لمعرفة المزيد!",
         )
         return
     pablo = await client.send_message(message.chat.id, f"**🔎 جاري البحث** `{urlissed}`")
@@ -138,7 +138,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**File Name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**اسم الملف:** `{}`\n{}".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
