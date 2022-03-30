@@ -23,7 +23,7 @@ async def song(client, message: Message):
     if not urlissed:
         await client.send_message(
             message.chat.id,
-            "صيغة الأمر غير صالحة يرجى مراجعة قائمة التعليمات لمعرفة المزيد!",
+            "صيغة الأمر غير صالحة يرجى مراجعة .الاوامر لمعرفة المزيد!",
         )
         return
     pablo = await client.send_message(message.chat.id, f"**🔎 جاري البحث** `{urlissed}`")
@@ -238,7 +238,7 @@ async def vsong(client, message: Message):
     pablo = await client.send_message(message.chat.id, f"**🔎 جاري البحث** `{urlissed}`")
     if not urlissed:
         await pablo.edit(
-            "Sintaks Perintah Tidak Valid, Silakan Periksa Menu Bantuan Untuk Tahu Lebih Banyak!"
+            "صيغة الأمر غير صالحة يرجى مراجعة .الاوامر لمعرفة المزيد!"
         )
         return
 
@@ -269,7 +269,7 @@ async def vsong(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url, download=True)
     except Exception as e:
-        await event.edit(event, f"**Gagal Mengunduh** \n**Kesalahan :** `{str(e)}`")
+        await event.edit(event, f"**التحميل فشل** \n**خطأ :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
