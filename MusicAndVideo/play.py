@@ -106,7 +106,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
+                    photo="https://te.legra.ph/file/db51a5777ce11eb3c29a3.jpg",
                     caption=f"""
 **#⃣ يَتمَ اެݪتشغِيݪ اެلانِ {pos}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
@@ -126,7 +126,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/6213d2673486beca02967.png",
+                    photo="https://te.legra.ph/file/286b2c436bcccd74b398c.jpg",
                     caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
@@ -137,7 +137,7 @@ async def play(client, m: Message):
 
     else:
         if len(m.command) < 2:
-            await m.reply("-› الرد على ملف صوتي او راجع -› [S᥆ᥙrᥴᥱ Frᥱᥱძ᥆ꪔ ♪](t.me/xl444) لمعرفة استخدامي.")
+            await m.reply("-› الرد على ملف صوتي او راجع زر .الاوامر لمعرفة استخدامي.")
         else:
             await m.delete()
             huehue = await m.reply("❤️‍🔥 جَاެࢪي اެݪبَحثَ")
@@ -232,7 +232,7 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
+                    photo="https://te.legra.ph/file/286b2c436bcccd74b398c.jpg",
                     caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
@@ -256,7 +256,7 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/6213d2673486beca02967.png",
+                    photo="https://te.legra.ph/file/7713b9828bced85d9b46e.jpg",
                     caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
@@ -268,7 +268,7 @@ async def vplay(client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "**-› الرد على ملف صوتي او راجع -› [S᥆ᥙrᥴᥱ Frᥱᥱძ᥆ꪔ ♪](t.me/xl444) لمعرفة استخدامي.**"
+                "**-› الرد على ملف صوتي او راجع -› زر .الاوامر لمعرفة استخدامي.**"
             )
         else:
             await m.delete()
@@ -370,7 +370,7 @@ async def playfrom(client, m: Message):
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     # await m.reply_to_message.delete()
                     await m.reply_photo(
-                        photo="https://telegra.ph/file/6213d2673486beca02967.png",
+                        photo="https://te.legra.ph/file/286b2c436bcccd74b398c.jpg",
                         caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {chat}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
