@@ -66,7 +66,7 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                f"**⏸ توقف التشغيل مؤقتًا.**\n\n• لاستمرار التشغيل  » {HNDLR}resume"
+                f"**⏸ توقف التشغيل مؤقتًا.**\n\n• لاستمرار التشغيل  » {HNDLR}استمر"
             )
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
@@ -83,7 +83,7 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                f"**▶ استئناف التشغيل المتوقف مؤقتًا**\n\n• لإيقاف التشغيل مؤقتًا ، استخدم الأمر » {HNDLR}pause**"
+                f"**▶ استئناف التشغيل المتوقف مؤقتًا**\n\n• لإيقاف التشغيل مؤقتًا ، استخدم الأمر » {HNDLR}توقف**"
             )
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
