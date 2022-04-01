@@ -410,13 +410,6 @@ async def playlist(client, m: Message):
         await m.reply("**❤️‍🔥 لايوجد شي قيد التشغيل**")
 
 
-@app.on_message(filters.command(["انزل") & self_or_contact_filter)
-async def stop_playing(_, message):
-    group_call = VOICE_CHATS[message.chat.id]
-    group_call.stop_playout()
-    os.remove('downloads/vcbot/input.raw')
-    await message.reply('Stopped Playing ❌')
-
 
 @app.on_message(filters.command(["اصعد") & self_or_contact_filter)
 async def join_voice_chat(client, message):
@@ -436,12 +429,3 @@ async def join_voice_chat(client, message):
         return
     VOICE_CHATS[chat_id] = group_call
     await message.reply('Joined the Voice Chat ✅')
-
-
-@app.on_message(filters.command(["مرتين") & self_or_contact_filter)
-async def leave_voice_chat(client, message):
-    chat_id = message.chat.id
-    group_call = VOICE_CHATS[chat_id]
-    await group_call.stop()
-    VOICE_CHATS.pop(chat_id, None)
-    await message.reply('Left Voice Chat ✅')
