@@ -408,3 +408,47 @@ async def playlist(client, m: Message):
             await m.reply(QUE, disable_web_page_preview=True)
     else:
         await m.reply("**❤️‍🔥 لايوجد شي قيد التشغيل**")
+
+
+@app.on_message(filters.command('stopvc') & self_or_contact_filter)
+async def stop_playing(_, message):
+    group_call = VOICE_CHATS[message.chat.id]
+    group_call.stop_playout()
+    os.remove('downloads/vcbot/input.raw')
+    await message.reply('Stopped Playing ❌')
+
+
+@app.on_message(filters.command('joinvc') & self_or_contact_filter)
+async def join_voice_chat(client, message):
+    input_filename = os.path.join(
+        client.workdir, DEFAULT_DOWNLOAD_DIR,
+        'input.raw',
+    )
+    if message.chat.id in VOICE_CHATS:
+        await message.reply('Already joined to Voice Chat 🛠')
+        return
+    chat_id = message.chat.id
+    try:
+        group_call = GroupCall(client, input_filename)
+        await group_call.start(chat_id)
+    except RuntimeError:
+        await message.reply('lel error!')
+        return
+    VOICE_CHATS[chat_id] = group_call
+    await message.reply('Joined the Voice Chat ✅')
+
+
+@app.on_message(filters.command('leavevc') & self_or_contact_filter)
+async def leave_voice_chat(client, message):
+    chat_id = message.chat.id
+    group_call = VOICE_CHATS[chat_id]
+    await group_call.stop()
+    VOICE_CHATS.pop(chat_id, None)
+    await message.reply('Left Voice Chat ✅')
+
+app.start()
+print('>>> JEVC USERBOT STARTED')
+idle()
+app.stop()
+print('\n>>> JEVC USERBOT STOPPED')
+
