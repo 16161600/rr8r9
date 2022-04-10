@@ -129,7 +129,7 @@ async def play(client, m: Message):
                     photo="https://te.legra.ph/file/7713b9828bced85d9b46e.jpg",
                     caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
-❤️‍🔥 اެݪاެسِمَ:
+❤️‍🔥 اެݪاެسِمَ: [{songname}]({link}):
 ❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                 )
