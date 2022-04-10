@@ -88,10 +88,11 @@ async def ytdl(link):
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
+    m.chat.title
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("** ❤️‍🔥يَتمَ اެݪتشغِيݪ اެلانِ**")
+            huehue = await replied.reply("**🔄 تتم تشغيل انتظر قليلا**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -106,12 +107,11 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://te.legra.ph/file/db51a5777ce11eb3c29a3.jpg",
+                    photo="https://telegra.ph/file/b0b13433b8595ed385f07.jpg",
                     caption=f"""
-**#⃣ يَتمَ اެݪتشغِيݪ اެلانِ {pos}
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
-❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
-❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
+**🏷️ العنوان : [{songname}]({link})
+💬 ايدي الدردشة : {chat_id}
+🎧 طلب من : {m.from_user.mention}**
 """,
                 )
             else:
@@ -126,51 +126,44 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://te.legra.ph/file/286b2c436bcccd74b398c.jpg",
+                    photo="https://telegra.ph/file/b0b13433b8595ed385f07.jpg",
                     caption=f"""
-**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
-❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
-❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
+**▶ تم تشغيل الاغنية 
+**🏷️ العنوان : [{songname}]({link})
+💬 ايدي الدردشة : {chat_id}
+🎧 طلب من : {m.from_user.mention}**
 """,
                 )
 
     else:
         if len(m.command) < 2:
-            await m.reply("-› الرد على ملف صوتي او راجع زر .الاوامر لمعرفة استخدامي.")
+            await m.reply("يجب عليك الرد على الاغنيه او وضع اسمها مع الامر")
         else:
             await m.delete()
-            huehue = await m.reply("❤️‍🔥 جَاެࢪي اެݪبَحثَ")
+            huehue = await m.reply("🔎 جاري البحث الرجاء الانتظار ")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await huehue.edit("`لم يتم العثور على نتائج`")
+                await huehue.edit("- لم يتم العثور على شيء ")
             else:
                 songname = search[0]
-                title = search[0]
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
-                userid = m.from_user.id
-                srrf = m.chat.title
-                ctitle = await CHAT_TITLE(srrf)
-                thumb = await gen_thumb(thumbnail, title, userid, ctitle)
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**خطا ⚠️** \n\n`{ytlink}`")
+                    await huehue.edit(f"**- عذرا هناك خطأ ما** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                         await huehue.delete()
-                        # await m.reply_to_message.delete()
                         await m.reply_photo(
-                            photo=f"{thumb}",
+                            photo=f"{thumbnail}",
                             caption=f"""
-**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({url})
-❤️‍🔥 اެݪمَدَةَ: {duration}
-❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
-❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
+**🏷️  العنوان : [{songname}]({url})
+⏱️ المدة : {duration}
+💬 ايدي المحادثه : {chat_id}
+🎧 طلب من : {m.from_user.mention}**
 """,
                         )
                     else:
@@ -186,13 +179,13 @@ async def play(client, m: Message):
                             await huehue.delete()
                             # await m.reply_to_message.delete()
                             await m.reply_photo(
-                                photo=f"{thumb}",
+                                photo=f"{thumbnail}",
                                 caption=f"""
-**▶ يَتمَ اެݪتشغِيݪ اެلانِ
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({url})
-❤️‍🔥 اެݪمَدَةَ: {duration}
-❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
-❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
+**▶ بدأ تشغيل الاغنية
+**🏷️  العنوان : [{songname}]({url})
+⏱️ المدة : {duration}
+💬 ايدي المحادثه : {chat_id}
+🎧 طلب من : {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
