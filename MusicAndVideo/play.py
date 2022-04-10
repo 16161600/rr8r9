@@ -160,7 +160,6 @@ async def play(client, m: Message):
                             photo=f"{thumbnail}",
                             caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
 ❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                         )
