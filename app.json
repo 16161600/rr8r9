@@ -20,7 +20,7 @@
         "HNDLR": {
             "description": "لاتغيرها ابدا اتركها كما هي",
             "required": false,
-            "value": "."
+            "value": ""
         },
         "API_HASH": {
             "description": "انسخ هذه وضعة في الفراغ : c531d0727df89656a374d7ef2485a779",
