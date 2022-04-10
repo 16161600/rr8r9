@@ -179,9 +179,9 @@ async def play(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{thumbnail}",
                                 caption=f"""
-**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
-❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
-❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
+** ❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ
+**❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
+❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
