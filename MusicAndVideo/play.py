@@ -92,7 +92,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**🔄 تتم تشغيل انتظر قليلا**")
+            huehue = await replied.reply("**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ **")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -107,11 +107,11 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/b0b13433b8595ed385f07.jpg",
+                    photo="https://te.legra.ph/file/7713b9828bced85d9b46e.jpg",
                     caption=f"""
-**🏷️ العنوان : [{songname}]({link})
-💬 ايدي الدردشة : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
+❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                 )
             else:
@@ -126,21 +126,20 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/b0b13433b8595ed385f07.jpg",
+                    photo="https://te.legra.ph/file/7713b9828bced85d9b46e.jpg",
                     caption=f"""
-**▶ تم تشغيل الاغنية 
-**🏷️ العنوان : [{songname}]({link})
-💬 ايدي الدردشة : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+❤️‍🔥 اެݪاެسِمَ:
+❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                 )
 
     else:
         if len(m.command) < 2:
-            await m.reply("يجب عليك الرد على الاغنيه او وضع اسمها مع الامر")
+            await m.reply("-› الرد على ملف صوتي او راجع -› زر .الاوامر لمعرفة استخدامي.**")
         else:
             await m.delete()
-            huehue = await m.reply("🔎 جاري البحث الرجاء الانتظار ")
+            huehue = await m.reply("❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ ")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -160,10 +159,9 @@ async def play(client, m: Message):
                         await m.reply_photo(
                             photo=f"{thumbnail}",
                             caption=f"""
-**🏷️  العنوان : [{songname}]({url})
-⏱️ المدة : {duration}
-💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
+❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                         )
                     else:
@@ -181,11 +179,9 @@ async def play(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{thumbnail}",
                                 caption=f"""
-**▶ بدأ تشغيل الاغنية
-**🏷️  العنوان : [{songname}]({url})
-⏱️ المدة : {duration}
-💬 ايدي المحادثه : {chat_id}
-🎧 طلب من : {m.from_user.mention}**
+**❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
+❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
+❤️‍🔥 طَݪبَ مَنِ : {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
@@ -225,11 +221,10 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://te.legra.ph/file/286b2c436bcccd74b398c.jpg",
+                    photo="https://te.legra.ph/file/7713b9828bced85d9b46e.jpg",
                     caption=f"""
 **❤️‍🔥 يَتمَ اެݪتشغِيݪ اެلانِ {pos}
 ❤️‍🔥 اެݪاެسِمَ: [{songname}]({link})
-❤️‍🔥 اެݪدَࢪدَشِةَ: {chat_id}
 ❤️‍🔥 طَݪبَ مَنِ: {m.from_user.mention}**
 """,
                 )
